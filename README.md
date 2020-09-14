@@ -38,4 +38,4 @@ A simple ToDo list made using `C++` for data management and logic and [Qt](https
 
 ## Screenshot
 
-![Screenshot](https://github.com/albbus-stack/ToDo/blob/master/ToDo_capture.PNG)
+![Screenshot](https://github.com/albbus-stack/Qt-ToDo/blob/master/ToDo_capture.PNG)
