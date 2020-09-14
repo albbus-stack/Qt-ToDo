@@ -48,9 +48,6 @@
     <property name="spacing">
      <number>10</number>
     </property>
-    <property name="itemAlignment">
-     <set>Qt::AlignJustify</set>
-    </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -63,9 +60,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -82,9 +76,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <zorder>listWidget</zorder>
