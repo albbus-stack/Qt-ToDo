@@ -30,7 +30,9 @@ public:
 
 private:
     QString task;
+
     QString deadLine;
+
     bool done;
 };
 
