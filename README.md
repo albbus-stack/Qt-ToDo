@@ -16,7 +16,7 @@ A simple ToDo list made using `C++` for data management and logic and [Qt](https
 ###### Steps
 
 1. Pull this repository.
-2. Open [ToDo.pro](https://github.com/albbus-stack/ToDo/blob/master/ToDo.pro) with Qt.
+2. Open [ToDo.pro](https://github.com/albbus-stack/Qt-ToDo/blob/master/ToDo.pro) with Qt.
 3. Run and enjoy. :octocat:
 
 #### Qt Tests
