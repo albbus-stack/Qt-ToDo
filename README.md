@@ -9,14 +9,22 @@ A simple ToDo list made using `C++` for data management and logic and [Qt](https
 
 ###### Requirements
 
-* Qt 5.15
+* Qt 5.15 or higher
 * MingW or another `C++` compiler
+* Qt Creator to use .pro setup
 
 ###### Steps
 
 1. Pull this repository.
-2. Open [ToDo.pro](https://github.com/albbus-stack/ToDo/blob/master/ToDoList.pro) with Qt.
+2. Open [ToDo.pro](https://github.com/albbus-stack/ToDo/blob/master/ToDo.pro) with Qt.
 3. Run and enjoy. :octocat:
+
+#### Qt Tests
+
+To run them, after building all the .pro files in the [test](https://github.com/albbus-stack/Qt-ToDo/tree/master/tests) folder you should go into your `/build-Test...` folders and use these .bat [files](https://github.com/albbus-stack/Qt-ToDo/blob/master/build/testController/TestController.bat), changing the `PATH` to your Qt installation.
+
+#####
+![Tests](https://github.com/albbus-stack/Qt-ToDo/blob/master/tests/Tests.png)
 
 ## Shortcuts
 
