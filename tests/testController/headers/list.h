@@ -57,9 +57,9 @@ public:
         return li.count();
     }
 
-    void saveList();
+    void saveList(QString name = "./list.txt");
 
-    void loadList();
+    void loadList(QString name = "./list.txt");
 
     QList<Item*> getList();
 

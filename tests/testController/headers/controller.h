@@ -12,7 +12,7 @@ public:
     void write(QString t,QString d,bool cS);
     void clear();
     QList<Item*> search(QString d);
-    void save(QString t,QString d,bool cS);
+    void save(QString t,QString d,bool cS,QString name = "./list.txt");
 private:
     List* list;
 };
