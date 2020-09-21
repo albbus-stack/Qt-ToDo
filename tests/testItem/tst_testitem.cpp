@@ -26,7 +26,7 @@ void TestItem::Constructor(){
     QString Date=QDate::currentDate().toString("dd.MM.yyyy");
     bool Done=true;
     Item i(String,Date,Done);
-    QVERIFY2(i.getTask()==String, "the name of the task doesn't match");
+    QVERIFY2(i.getTask()==String,"the name of the task doesn't match");
     QVERIFY2(i.getDate()==Date,"date doesn't match");
     QVERIFY2(i.getDone()==Done,"checkstate doesn't match");
 }
@@ -35,7 +35,7 @@ void TestItem::SetTask(){
     Item it("a",QDate::currentDate().toString("dd.MM.yyyy"),false);
     QString String="test";
     it.setTask(String);
-    QVERIFY2(it.getTask()==String,"setTask doesn't work!");
+    QVERIFY2(it.getTask()==String,"setTask doesn't work");
 }
 
 void TestItem::SetDone(){
