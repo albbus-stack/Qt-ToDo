@@ -20,7 +20,6 @@ void Add::on_pushButton_clicked()
 {
     activity=ui->lineEdit->text();
     Add::close();
-
 }
 
 const QString Add::getDate(){
