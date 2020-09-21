@@ -15,7 +15,6 @@ void List::saveList(){
         }
     file.close();
     }
-
 }
 
 void List::loadList(){
