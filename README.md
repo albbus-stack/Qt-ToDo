@@ -26,6 +26,10 @@ To run them, after building all the .pro files in the [test](https://github.com/
 #####
 ![Tests](https://github.com/albbus-stack/Qt-ToDo/blob/master/tests/Tests.png)
 
+#### Structure
+
+You can see the UML class diagram on [this](https://app.lucidchart.com/documents/view/9751743c-2b2b-42f2-9e27-436e74323da8) LucidChart.
+
 ## Shortcuts
 
 `Ctrl + A` : Add a new task
