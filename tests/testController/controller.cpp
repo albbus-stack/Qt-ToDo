@@ -16,8 +16,8 @@ QList<Item*> Controller::search(QString d){
     return srcList;
 }
 
-void Controller::save(QString t,QString d,bool cS){
+void Controller::save(QString t,QString d,bool cS, QString name){
     Item* a=new Item(t,d,cS);
     list->pushBack(a);
-    list->saveList();
+    list->saveList(name);
 }

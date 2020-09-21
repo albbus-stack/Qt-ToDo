@@ -16,6 +16,8 @@ private Q_SLOTS:
     void Search();
 
     void Save();
+
+    void DifferentList();
 };
 
 TestController::TestController(){
@@ -50,6 +52,15 @@ void TestController::Save(){
     c->save("test2",QDate::currentDate().toString("dd.MM.yyyy"),true);
     TList.loadList();
     QVERIFY2(TList.getElements()==2,"save doesn't iterate through the items");
+}
+
+void TestController::DifferentList(){
+    List *l1 = new List;
+    Controller *c1 = new Controller(l1);
+    c1->save("Test1", QDate::currentDate().toString("dd.MM.yyyy"),false, "./list1.txt");
+    List TList;
+    TList.loadList("./list1.txt");
+    QVERIFY2(TList.getElements()==1,"saving on a different list doesn't work");
 }
 
 QTEST_APPLESS_MAIN(TestController)

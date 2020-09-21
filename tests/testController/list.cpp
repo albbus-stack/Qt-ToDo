@@ -1,8 +1,8 @@
 #include "headers/list.h"
 #include"stdio.h"
 
-void List::saveList(){
-    QString filename="./list.txt";
+void List::saveList(QString name){
+    QString filename=name;
     QFile file(filename);
     if(file.open(QIODevice::WriteOnly| QIODevice::Text)){
         for(auto itr=li.begin();itr!=li.end();itr++){
@@ -17,8 +17,8 @@ void List::saveList(){
     }
 }
 
-void List::loadList(){
-    QString filename="./list.txt";
+void List::loadList(QString name){
+    QString filename=name;
     QFile file(filename);
     QTextStream memo(&file);
     li.clear();
