@@ -22,7 +22,6 @@ public:
     virtual void update();
 
 private slots:
-
     void on_actionsave_triggered();
 
     void on_actiondelete_lit_triggered();
