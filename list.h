@@ -1,11 +1,12 @@
 #ifndef LIST_H
 #define LIST_H
 
+#include<iostream>
 #include"subject.h"
 #include"QList"
 #include"item.h"
 #include"QDate"
-#include "QFile"
+#include"QFile"
 #include"QIODevice"
 #include"QTextStream"
 
@@ -27,20 +28,33 @@ public:
             observer->update();
     }
 
-    void addItem(Item* a){
+    void addItem(Item a){
         li.push_back(a);
         saveList();
         notify();
     }
 
-    void pushBack(Item* a){
+    void pushBack(Item a){
         li.push_back(a);
     }
 
-    void removeItem(Item* a){
-        li.removeOne(a);
-        saveList();
-        notify();
+    void removeItem(Item a){
+        int c = 0;
+        bool e = false;
+        for(auto i : li) {
+            if(i.getTask()==a.getTask() && i.getDate()==a.getDate()){
+                li.removeAt(c);
+                e = true;
+            }
+            c++;
+        }
+        if(e){
+            saveList();
+            notify();
+        }
+        else{
+            std::cerr << "element to be removed not found" << std::endl;
+        }
     }
 
     void deleteAll(){
@@ -57,16 +71,26 @@ public:
         return li.count();
     }
 
-    void saveList();
+    int getUndoneElements()const{
+        int c = 0;
+        for (auto i : li){
+            if(!i.getDone()){
+                c++;
+            }
+        }
+        return c;
+    }
 
-    void loadList();
+    void saveList(QString name = "./list.txt");
 
-    QList<Item*> getList();
+    void loadList(QString name = "./list.txt");
 
-    QList<Item*> search(QString d);
+    QList<Item> getList();
+
+    QList<Item> search(QString d);
 
 private:
-    QList<Item*> li;
+    QList<Item> li;
 
     QList<Observer*> observers;
 };
