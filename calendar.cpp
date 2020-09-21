@@ -15,7 +15,6 @@ Calendar::Calendar(class List *l, Controller *c, QWidget *parent) :
     selDate=QDate::currentDate();
     setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
     update();
-
 }
 
 Calendar::~Calendar()
@@ -37,7 +36,6 @@ void Calendar::on_calendarWidget_clicked(const QDate &date)
 {
     selDate=date;
     Calendar::close();
-
 }
 
 QDate Calendar::getSelDate(){
