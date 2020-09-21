@@ -2,7 +2,7 @@
 #include"item.h"
 
 void Controller::write(QString t, QString d,bool cS){
-    Item* i=new Item(t,d,cS);
+    Item i= Item(t,d,cS);
     list->addItem(i);
 }
 
@@ -11,13 +11,13 @@ void Controller::clear(){
     list->saveList();
 }
 
-QList<Item*> Controller::search(QString d){
-    QList<Item*> srcList=list->search(d);
+QList<Item> Controller::search(QString d){
+    QList<Item> srcList=list->search(d);
     return srcList;
 }
 
-void Controller::save(QString t,QString d,bool cS){
-    Item* a=new Item(t,d,cS);
+void Controller::save(QString t,QString d,bool cS, QString name){
+    Item a= Item(t,d,cS);
     list->pushBack(a);
-    list->saveList();
+    list->saveList(name);
 }

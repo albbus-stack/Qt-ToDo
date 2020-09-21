@@ -28,13 +28,13 @@ MainWindow::~MainWindow()
 void MainWindow::update(){
     ui->listWidget->clear();
     QListWidgetItem* item;
-    QList<Item*> list=List->getList();
+    QList<Item> list=List->getList();
     QString t,d;
     bool cS;
-    for(auto itr=list.begin();itr!=list.end();itr++){
-        t=(*itr)->getTask();
-        d=(*itr)->getDate();
-        cS=(*itr)->getDone();
+    for(auto i : list){
+        t=i.getTask();
+        d=i.getDate();
+        cS=i.getDone();
         item=new QListWidgetItem(t+"\n"+d,ui->listWidget);
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         if(cS)
@@ -42,6 +42,7 @@ void MainWindow::update(){
         else
             item->setCheckState(Qt::Unchecked);
     }
+    ui->label->setText("You have to do "+QString::number(List->getUndoneElements())+" tasks");
 }
 
 
@@ -59,6 +60,7 @@ void MainWindow::on_actionsave_triggered()
             QString task=item->text().split("\n").at(0);
             QString date=item->text().split("\n").at(1);
             controller->save(task,date,cS);
+            ui->label->setText("You have to do "+QString::number(List->getUndoneElements())+" tasks");
         }
     }
     else{
@@ -103,16 +105,16 @@ void MainWindow::on_actionsearch_triggered()
     cDialog.setModal(true);
     cDialog.exec();
     QDate selDate=cDialog.getSelDate();
-    QList<Item*> srcList=controller->search(selDate.toString("dd.MM.yyyy"));
+    QList<Item> srcList=controller->search(selDate.toString("dd.MM.yyyy"));
     QListWidgetItem* item;
     ui->listWidget->clear();
     QString t;
     QString d;
     bool cS;
-    for(auto itr=srcList.begin();itr!=srcList.end();itr++){
-        t=(*itr)->getTask();
-        d=(*itr)->getDate();
-        cS=(*itr)->getDone();
+    for(auto i : srcList){
+        t=i.getTask();
+        d=i.getDate();
+        cS=i.getDone();
         item=new QListWidgetItem(t+"\n"+d,ui->listWidget);
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         if(cS)

@@ -23,11 +23,11 @@ Calendar::~Calendar()
 }
 
 void Calendar::update(){
-    QList<Item*> list=List->getList();
+    QList<Item> list=List->getList();
     QTextCharFormat dayHighlight;
     dayHighlight.setBackground(Qt::yellow);
-    for (auto itr=list.begin(); itr!=list.end();itr++){
-        QString aDay=(*itr)->getDate();
+    for (auto i : list){
+        QString aDay=i.getDate();
         ui->calendarWidget->setDateTextFormat(QDate::fromString(aDay,"dd.MM.yyyy"),dayHighlight);
     }
 }
