@@ -26,18 +26,18 @@ void TestController::WriteClear()
     List *l1=new List;
     Controller *c=new Controller(l1);
     c->write("text",QDate::currentDate().toString("dd.MM.yyyy"),false);
-    QVERIFY2(l1->getElements()==1, "write doesn't work!");
+    QVERIFY2(l1->getElements()==1, "write doesn't work");
     c->clear();
-    QVERIFY2(l1->getElements()==0,"clear doesn't work!");
+    QVERIFY2(l1->getElements()==0,"clear doesn't work");
 }
 
 void TestController::Search(){
     List *l2=new List;
     Controller *c=new Controller(l2);
     c->write("to be found",QDate::currentDate().toString("dd.MM.yyyy"),false);
-    QVERIFY2(c->search(QDate::currentDate().toString("dd.MM.yyyy")).count()==1,"search doesn't work proprely!");
+    QVERIFY2(c->search(QDate::currentDate().toString("dd.MM.yyyy")).count()==1,"search doesn't work proprely");
     QDate WDate=QDate::fromString("23.04.1997","dd.MM.yyyy");
-    QVERIFY2(c->search(WDate.toString("dd.MM.yyyy")).count()==0,"search doesn't work proprely!");
+    QVERIFY2(c->search(WDate.toString("dd.MM.yyyy")).count()==0,"search doesn't work proprely");
 }
 
 void TestController::Save(){
@@ -49,7 +49,7 @@ void TestController::Save(){
     QVERIFY2(TList.getElements()==1,"save doesn't work");
     c->save("test2",QDate::currentDate().toString("dd.MM.yyyy"),true);
     TList.loadList();
-    QVERIFY2(TList.getElements()==2,"save doasen't iterate elements");
+    QVERIFY2(TList.getElements()==2,"save doesn't iterate through the items");
 }
 
 QTEST_APPLESS_MAIN(TestController)
