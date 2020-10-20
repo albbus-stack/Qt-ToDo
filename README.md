@@ -45,7 +45,7 @@ You can see the UML class diagram on [this](https://app.lucidchart.com/documents
 
 ![Screenshot](https://github.com/albbus-stack/Qt-ToDo/blob/master/ToDo_capture.PNG)
 
-#### Qt Tests
+## Qt Tests
 
 To run them, after building all the .pro files in the [test](https://github.com/albbus-stack/Qt-ToDo/tree/master/tests) folder you should go into your `/build-Test.../debug` folders and copy these .bat [files](https://github.com/albbus-stack/Qt-ToDo/blob/master/build/testController/TestController.bat), changing in them the `PATH` to your Qt installation.
 
