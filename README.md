@@ -1,7 +1,7 @@
 # Qt-ToDo
 
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![Qt](https://camo.githubusercontent.com/20b46b5f6c00149c9909f644845e4b17cdb94941/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f51742d716d616b652d677265656e2e737667)](https://github.com/qt)
+[![GPLv3 License](https://img.shields.io/badge/%20License-GPL%20v3-yellow?style=flat-square)](https://opensource.org/licenses/)
+[![Qt](https://img.shields.io/badge/Qt-qmake-brightgreen?style=flat-square)](https://github.com/qt)
 
 A simple ToDo list made using `C++` for data management and logic and [Qt](https://github.com/qt) for Gui.
 
