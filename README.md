@@ -1,8 +1,8 @@
 # Qt-ToDo
 
-[![GPLv3 License](https://img.shields.io/badge/%20License-GPL%20v3-yellow?style=flat-square)](https://opensource.org/licenses/)
-[![Qt](https://img.shields.io/badge/Qt-qmake-brightgreen?style=flat-square)](https://github.com/qt)
-[![Commit](https://img.shields.io/github/last-commit/albbus-stack/Qt-todo?label=Commit&color=42c5f5&style=flat-square&logo=qt&logoColor=42c5f5&logoWidth=18&labelColor=555555)](https://github.com/albbus-stack/Qt-ToDo/commits)
+[![GPLv3 License](https://img.shields.io/badge/%20License-GPL%20v3-yellow?style=flat-square&labelColor=black)](https://opensource.org/licenses/)
+[![Qt](https://img.shields.io/badge/Qt-qmake-brightgreen?style=flat-square&labelColor=black)](https://github.com/qt)
+[![Commit](https://img.shields.io/github/last-commit/albbus-stack/Qt-todo?label=Commit&color=42c5f5&style=flat-square&logo=qt&logoColor=42c5f5&logoWidth=18&labelColor=black)](https://github.com/albbus-stack/Qt-ToDo/commits)
 
 A simple ToDo list made using `C++` for data management and logic and [Qt](https://github.com/qt) for Gui.
 
